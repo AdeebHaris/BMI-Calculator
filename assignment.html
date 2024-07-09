@@ -42,7 +42,7 @@
                  <h1 class="ms-2 m-0 ">Calculator</h1> 
             </div>  -->
             <div class="options d-flex ms-3">
-                <img src="./images/body-mass-index.png" alt="" height="50px" width="50px">
+                <img src="./images/body-mass-index.png" alt="BMI image" height="50px" width="50px">
                 <ul class="mt-2"> 
                     <li><a href="">Home</a></li>
                     <li><a href="">Fitness Tips</a></li>
@@ -57,8 +57,8 @@
                 <form class="p-3" id="form">
                     <h1 class="text-center mb-4" style="color:#478CCF">BMI Calculator</h1>
                     <div class="d-flex mb-3">
-                        <h6 class="fw-bold">Gender:</h6>
-                        <div class="ms-3 form-check">
+                        <h6 class="fw-bold me-4">Gender:</h6>
+                        <div class="ms-4 form-check">
                             <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
                             <label class="form-check-label" for="male">
                                 Male
@@ -128,6 +128,12 @@
             final_result.innerHTML="0"
     
         }
+        document.addEventListener("DOMContentLoaded", function() {
+  var radioGroup = document.getElementsByName('gender');
+  for (var i = 0; i < radioGroup.length; i++) {
+    radioGroup[i].checked = false;
+  }
+});
     </script>
 </body>
 </html>
